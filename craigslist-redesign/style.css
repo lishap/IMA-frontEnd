@@ -1,0 +1,49 @@
+body{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.topLeftNav{
+  background: #ccc;
+  width: 20%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.accountIcon{
+  position: absolute;
+  height: 40px;
+}
+
+.plusIcon{
+  position: absolute;
+  height: 40px;
+}
+
+.searchNav{
+  background: #ccc;
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.searchBar{
+  position: absolute;
+  background: #fff;
+  height: 40px;
+  border-radius: 24px;
+  width: 50%;
+  left: 30%;
+}
+
+.searchIcon{
+  position: absolute;
+  height: 40px;
+  left: 90%;
+}
+
+.locationText{
+}
