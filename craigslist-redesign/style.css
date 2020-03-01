@@ -1,0 +1,214 @@
+body{
+  font-family: arial;
+}
+
+.topBar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.topLeftNav{
+  display: flex;
+  background: #ccc;
+  width: 25%;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.topLeftNav img {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.searchNav{
+  background: #ccc;
+  width: 74%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.searchBar{
+  position: absolute;
+  background: #fff;
+  height: 40px;
+  border-radius: 24px;
+  width: 50%;
+  left: 30%;
+  margin-top: 10px;
+}
+
+.searchIcon{
+  position: absolute;
+  height: 3vw;
+  left: 90%;
+  margin-top: 2%;
+}
+
+.locationText{
+  position: absolute;
+  margin-top:20px;
+  right: 5%;
+  font-size: 2vw;
+}
+
+.mainTitle{
+  display: flex;
+}
+.forSaleTitle{
+  background: #ccc;
+  width: 30%;
+  height: 60px;
+  margin: 5px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+.jobTitle{
+  background: #ccc;
+  width: 30%;
+  height: 60px;
+  margin: 5px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cal {
+    border-top: 5px solid       #ffffff;
+    background: #ccc;
+    text-align: center;
+    font-size: 5vw; 
+}
+
+.forSaleItems{
+  margin-top: 30px;
+  font-size: 1.3vw;
+  column-count: 2;
+  column-gap: 200px;
+  font-weight: normal; 
+}
+
+.jobItems{
+  margin-top: 30px;
+  font-size: 1.3vw;
+  column-count: 2;
+  font-weight: normal;
+  column-gap: 100px;
+}
+
+.sideTitles{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  
+}
+
+.sideCategories{
+  font-weight: bold;
+  font-size: 22px;
+  font-size: 1.4vw;
+  max-width: 80px;
+}
+
+.otherCategories{
+  column-count: 2;
+  column-gap: 15px;
+  font-size: 1vw;
+  width: 29%; 
+  margin-left: 2%;
+  
+}
+
+/* Tablet */ 
+@media only screen and (max-width : 1200px) {
+  
+    .cal {
+    font-size: 4vw; }
+  
+  .forSaleTitle{
+    width: 1.3vw:
+  }
+  
+   .jobTitle{
+    width: 1.3vw:
+  }
+  .jobItems{
+    column-count: 1;
+     font-size: 0.8vw;
+  column-gap: 20px;
+    max-width: 30%;
+  }
+  .forSaleItems{
+     column-count: 1;
+      font-size: 0.8vw;
+  column-gap: 20px;
+  }
+  
+  .sideCategories{
+    font-size: 1vw;
+    margin-right: 20px;
+    max-width: 40px;
+    
+  }
+  .otherCategories{
+     font-size: 0.6vw;
+    column-count: 1;
+    width: 10%;
+    margin-right: 10%;
+  }
+}
+
+/* Mobile */ 
+    @media only screen and (max-width : 480px) {
+      
+      .cal{
+        display: none;
+      }
+      
+      .sideCategories{
+        display:none;
+      }
+      
+      .otherCategories{
+        display:none;
+      }
+      
+      .mainTitle{
+        justify-content: center;
+      }
+      .forSaleTitle{
+        width: 50%;
+      }
+      
+      .forSaleItems{
+        width: 50%;
+        font-size: 20px;
+        
+      }
+      
+      .jobTitle{
+        width: 50%;
+      }
+      
+      .jobItems{
+        width: 50%;
+        font-size: 10px;
+      }
+}
