@@ -1,0 +1,68 @@
+body{
+  font-family: 'Inconsolata';
+}
+
+.borderTop{
+  display: flex;
+  background: #000;
+  width: 100%;
+  height: 60px;
+}
+
+.logo{
+  display:flex;
+  align-items: center;
+  margin: auto;
+}
+
+.borderLeft{
+  position: fixed;
+  background: #000;
+  width: 5%;
+  height: 100vh;
+}
+
+.castPhotos{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faces{
+  margin-left:5%;
+}
+
+.buttons{
+  display: flex;
+  margin: auto;
+}
+
+.bottomNavButton{
+  background: none;
+  border: none;
+  padding: 0!;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Inconsolata';
+  cursor: pointer;
+}
+
+.bottomNavButton:hover{
+  text-decoration: underline;
+}
+
+.borderRight{
+  position: fixed;
+  right: 8px;
+  background: #000;
+  width: 5%;
+  height: 100vh;
+}
+
+.borderBottom{
+  bottom: 0;
+  display: flex;
+  background: #000;
+  width: 100%;
+  height: 60px;
+}
