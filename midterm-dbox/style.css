@@ -1,0 +1,75 @@
+body{
+  font-family: 'Inconsolata';
+}
+
+.borderTop{
+  display: flex;
+  background: #000;
+  width: 100%;
+  height: 60px;
+}
+
+.borderLeft{
+  position: fixed;
+  background: #000;
+  width: 5%;
+  height: 100vh;
+}
+
+  .homeText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 5%;
+  }
+
+.poster{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6%;
+}
+
+.homeText{
+    font-size: 28px; 
+  }
+
+ .showText{
+    font-size:22px; 
+  }
+
+.buttons{
+  display: flex;
+  margin: auto;
+}
+
+.bottomNavButton{
+  background: none;
+  border: none;
+  padding: 0!;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Inconsolata';
+  cursor: pointer;
+}
+
+.bottomNavButton:hover{
+  text-decoration: underline;
+}
+
+.borderRight{
+  position: fixed;
+  right: 8px;
+  background: #000;
+  width: 5%;
+  height: 100vh;
+}
+
+.borderBottom{
+  bottom: 0;
+  display: flex;
+  background: #000;
+  width: 100%;
+  height: 60px;
+}
