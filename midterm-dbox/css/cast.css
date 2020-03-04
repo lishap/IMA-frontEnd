@@ -28,7 +28,7 @@ body{
 
 .person{
   display: flex;
-  align-items: column;
+  flex-direction: column;
   width: 25%;
   height: 50%;
 }
