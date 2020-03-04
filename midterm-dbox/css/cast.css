@@ -23,13 +23,14 @@ body{
 }
 
 .castPhotos{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  
 }
 
-.faces{
-  margin-left:5%;
+.person{
+  display: flex;
+  align-items: column;
+  width: 25%;
+  height: 50%;
 }
 
 .buttons{
