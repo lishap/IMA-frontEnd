@@ -1,77 +1,27 @@
 
 @import "style.css"; 
 
-body{
-  font-family: 'Inconsolata';
-}
-
-.borderTop{
+.cast{
   display: flex;
-  background: #000;
-  width: 100%;
-  height: 60px;
-}
-
-.logo{
-  display:flex;
-  align-items: center;
-  margin: auto;
-}
-
-.borderLeft{
-  position: absolute;
-  background: #000;
-  width: 5%;
-  height: calc(100vh - 120px);
-}
-
-.borderRight{
-  position: absolute;
-  right: 8px;
-  background: #000;
-  width: 5%;
-  height: calc(100vh - 120px);
-}
-
-.castPhotos{
-  display: flex;
-  width: calc(100vh - 120px)  
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .person{
   display: flex;
   flex-direction: column;
-  width: 25%;
   height: 50%;
+  width: 25%;
 }
 
-
-.borderBottom{
-  bottom: 0;
-  display: flex;
-  background: #000;
-  width: 100%;
-  height: 60px;
+break{
+  flex-basis: 100%;
+  width: 0px; 
+  height: 0px; 
+  overflow: hidden;
 }
 
-.buttons{
-  display: flex;
-  margin: auto;
-}
-
-.bottomNavButton{
-  background: none;
-  border: none;
-  padding: 0!;
-  color: #fff;
-  font-size: 26px;
-  font-family: 'Inconsolata';
-  cursor: pointer;
-}
-
-.bottomNavButton:hover{
-  text-decoration: underline;
-}
 
 
 
