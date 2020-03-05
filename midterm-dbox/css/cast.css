@@ -1,54 +1,22 @@
-<<<<<<< HEAD
 
 @import "style.css"; 
 
 .cast{
-=======
-body{
-  font-family: 'Inconsolata';
-}
-
-.borderTop{
-  display: flex;
-  background: #000;
-  width: 100%;
-  height: 60px;
-}
-
-.logo{
-  display:flex;
-  align-items: center;
-  margin: auto;
-}
-
-.borderLeft{
-  position: absolute;
-  background: #000;
-  width: 5%;
-  height: calc(100vh - 120px);
-}
-
-.borderRight{
-  position: absolute;
-  right: 8px;
-  background: #000;
-  width: 5%;
-  height: calc(100vh - 120px);
-}
-
-.castPhotos{
->>>>>>> parent of 08f0c48... new file structure for css
   display: flex;
   flex-wrap: wrap;
-  margin-left: 5%;
-  margin-right: 5%;
+  height: calc(100vh - 120px);
 }
 
 .person{
   display: flex;
   flex-direction: column;
-  height: 50%;
   width: 25%;
+  height: 50%;
+}
+
+#castImage{
+  width: 100%;
+  height: 100%;
 }
 
 break{
