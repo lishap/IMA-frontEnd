@@ -6,6 +6,7 @@
     <title>cast</title>
     <link rel="stylesheet" href="./css/cast.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
+    <script src="./webcam/p5.js"></script>
   </head>
   <body>
     <div class="borderTop">
@@ -52,7 +53,24 @@
         drama '23 </p>
       </div> <!-- end Shea-->
       <div class="person"> <!--start YOU-->
-        <iframe src="https://editor.p5js.org/lishap/embed/CPuhFpwZ"></iframe>
+        <script>
+          let capture;
+
+          function setup() {
+            createCanvas(windowWidth, windowHeight);
+            capture = createCapture(VIDEO);
+            capture.size(windowWidth, windowHeight);
+            capture.hide(windowWidth, windowHeight);
+          }
+
+          function draw() {
+            background(255);
+            imageMode(CENTER);
+            scale(-1.0,1.0);
+            image(capture, -windowWidth/2, windowHeight/2, windowWidth*1.3, windowHeight);
+          }
+
+        </script>
         <p align="center">YOU <br>
           <a href="contact.html"><u>audition info</u> </a></p> </div>
       </div> <!--end YOU-->
