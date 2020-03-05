@@ -56,23 +56,3 @@ body{
 .bottomNavButton:hover{
   text-decoration: underline;
 }
-
-
-.content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 120px);
-}
-
-#homeText{
-  font-size: 32px; 
-}
-
-#showText{
-  font-size: 28px; 
-}
-
-.poster{
-}
