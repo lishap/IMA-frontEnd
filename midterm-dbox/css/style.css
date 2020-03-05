@@ -1,3 +1,7 @@
+*{
+  margin:0;
+}
+
 body{
   font-family: 'Inconsolata';
 }
@@ -24,8 +28,8 @@ body{
 
 .borderRight{
   position: absolute;
-  right: 8px;
   background: #000;
+  right:0px;
   width: 5%;
   height: calc(100vh - 120px);
 }

@@ -2,8 +2,10 @@
 @import "style.css"; 
 
 .cast{
+  margin-left: 5%;
   display: flex;
   flex-wrap: wrap;
+  width: calc(100vw - 10%);
   height: calc(100vh - 120px);
 }
 
@@ -11,7 +13,7 @@
   display: flex;
   flex-direction: column;
   width: 25%;
-  height: 50%;
+  height: 45%;
 }
 
 #castImage{
@@ -26,6 +28,12 @@ break{
   overflow: hidden;
 }
 
+p{
+  font-size: 16px;
+}
 
+p::first-line{
+  font-size: 30px;
+}
 
 
