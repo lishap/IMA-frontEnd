@@ -35,10 +35,7 @@ p::first-line{
   font-size: 16px;
 }
 
-#videoElement{
-  /* width: ((100vw - 10%)/4);
-  height: ((100vh - 120px)/2); */
-  width:100px;
+.webcam-canvas {
 }
 
 

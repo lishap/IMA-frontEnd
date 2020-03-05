@@ -6,7 +6,7 @@
     <title>cast</title>
     <link rel="stylesheet" href="./css/cast.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
-    <script src="./webcam/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
   </head>
   <body>
     <div class="borderTop">
@@ -53,24 +53,29 @@
         drama '23 </p>
       </div> <!-- end Shea-->
       <div class="person"> <!--start YOU-->
+        <div id="webcam">
         <script>
           let capture;
 
           function setup() {
-            createCanvas(windowWidth, windowHeight);
+            const parent = select("#webcam");
+            const canvas = createCanvas(330, 304);
+            canvas.parent(parent);
             capture = createCapture(VIDEO);
-            capture.size(windowWidth, windowHeight);
-            capture.hide(windowWidth, windowHeight);
+            capture.size(width, height);
+            capture.hide(width, height);
+            canvas.class("webcam-canvas")
           }
 
           function draw() {
             background(255);
             imageMode(CENTER);
             scale(-1.0,1.0);
-            image(capture, -windowWidth/2, windowHeight/2, windowWidth*1.3, windowHeight);
+            image(capture, -width/2, height/2, width*1.3, height);
           }
 
         </script>
+        </div> <!--end webcam-->
         <p align="center">YOU <br>
           <a href="contact.html"><u>audition info</u> </a></p> </div>
       </div> <!--end YOU-->
