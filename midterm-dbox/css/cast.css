@@ -35,7 +35,8 @@ p::first-line{
   font-size: 16px;
 }
 
-.webcam-canvas {
+.webcam-canvas{
+  width: calc(100vw - 10%);
+  height: calc(100vh - 120px);
 }
-
 
