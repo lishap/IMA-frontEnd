@@ -10,7 +10,7 @@
     margin-left: 5%;
   }
 
-  .pastButton{
+  .contactButton{
     background: none;
     border: none;
     padding: 0!;
@@ -19,7 +19,7 @@
     font-family: 'Inconsolata';
     text-align: left;
 }
-  .pastButton:hover{
+  .contactButton:hover{
     text-decoration: underline;
   }
   
