@@ -26,12 +26,8 @@
   
 /* tablet */
   @media only screen and (max-width : 780px) {
-    .content{
-        margin-left: 10%;
-      }
-    
     .pastButton{
-        font-size: 15px;
+        font-size: 25px;
     }
 
 }
@@ -39,12 +35,11 @@
   @media only screen and (max-width : 480px) {
     .content{
         height: calc(100vh - 120px);
-        width: calc(100vw - 30%);
-        margin-left: 15%;
+        width: calc(100vw - 40%);
+        margin-left: 20%;
       }
-    
     .pastButton{
-        font-size: 12px;
+        font-size: 30px;
     }
       
   }
