@@ -23,4 +23,50 @@
     text-decoration: underline;
   }
   
+/* tablet */
+  @media only screen and (max-width : 780px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 120px);
+        width: calc(100vw - 20%);
+        margin-left: 10%;
+      }
+    
+    .pastButton{
+        background: none;
+        border: none;
+        padding: 0!;
+        font-size: 15px;
+        color: #000;
+        font-family: 'Inconsolata';
+        text-align: left;
+    }
+
+}
+/* mobile */
+  @media only screen and (max-width : 480px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 120px);
+        width: calc(100vw - 24%);
+        margin-left: 12%;
+      }
+    
+    .pastButton{
+        background: none;
+        border: none;
+        padding: 0!;
+        font-size: 12px;
+        color: #000;
+        font-family: 'Inconsolata';
+        text-align: left;
+    }
+      
+  }
 
