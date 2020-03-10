@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - 120px);
-    width: calc(100vw - 20%);
-    margin-left: 10%;
+    width: calc(100vw - 30%);
+    margin-left: 15%;
     box-sizing: border-box;
+    overflow-y: scroll;
   }
 
   .pastButton{
@@ -35,8 +36,8 @@
   @media only screen and (max-width : 480px) {
     .content{
         height: calc(100vh - 120px);
-        width: calc(100vw - 40%);
-        margin-left: 20%;
+        width: calc(100vw - 30%);
+        margin-left: 15%;
       }
     .pastButton{
         font-size: 30px;
