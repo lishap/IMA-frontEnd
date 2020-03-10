@@ -8,6 +8,7 @@
   height: calc(100vh - 120px);
   width: calc(100vw - 10%);
   margin-left: 5%;
+  box-sizing: border-box;
 }
 
 #homeText{
@@ -25,15 +26,7 @@ img {
 
 /* tablet */
 @media only screen and (max-width : 780px) {
-  .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px);
-    width: calc(100vw - 20%);
-    margin-left: 10%;
-  }
+ /* ADD RESIZE */
 
   #homeText{
     font-size: 26px; 
@@ -48,13 +41,9 @@ img {
 
 /* mobile */
 @media only screen and (max-width : 480px) {
+  /* ADD RESIZE */
+  
   .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px);
-    width: calc(100vw - 24%);
     margin-left: 12%;
   }
 
