@@ -41,7 +41,7 @@
       height: calc(100vh - 120px);
       width: calc(100vw - 30%);
       margin-left: 15%;
-      font-size: 8px;
+      font-size: 12px;
     }
     .contactButton{
       font-size: 28px;
