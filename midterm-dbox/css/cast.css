@@ -64,6 +64,11 @@ p::first-line{
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 45%;
+    height: 35%;
+  }
+
+  .webcam-canvas{
+    width: calc((100vw / 2) - 10%) !important;
+    height: calc((100vh / 2) - 95px) !important;
   }
 }
