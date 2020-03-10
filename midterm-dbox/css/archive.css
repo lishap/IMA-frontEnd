@@ -25,6 +25,11 @@
   .pastButton:hover{
     text-decoration: underline;
   }
+
+  img {
+    max-width: 40%;
+    height: auto;
+  }
   
 /* tablet */
   @media only screen and (max-width : 780px) {
