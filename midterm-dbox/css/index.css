@@ -29,11 +29,11 @@ img {
  /* ADD RESIZE */
 
   #homeText{
-    font-size: 26px; 
+    font-size: 22px; 
   }
   
   #showText{
-    font-size: 18px; 
+    font-size: 16px; 
   }
 
 }
@@ -48,11 +48,11 @@ img {
   }
 
   #homeText{
-    font-size: 30px; 
+    font-size: 15px; 
   }
   
   #showText{
-    font-size: 26px; 
+    font-size: 12px; 
   }
 
 }
