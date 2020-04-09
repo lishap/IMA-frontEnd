@@ -1,0 +1,54 @@
+<!--DOCTYPE html-->
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payne - April 17 HW</title>
+    </head>
+    <body>
+        <div id="cool">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id="">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id="cool">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <button onclick="red()"> RED</button>
+        <button onclick = "blue()"> BLUE</button>
+        <button onclick = "yellow()"> YELLOW</button>
+        <div id="awesome"></div>
+        <div id="radical"></div>
+        <div id="epic"></div>
+    </body>
+    <script>
+        function red(){
+            document.body.style.backgroundColor = "red";
+            var nodelist = document.getElementsByTagName("p").length;
+            document.getElementById("awesome").innerHTML = ("There are ", nodelist, "paragraph tags on this page.");
+        }
+
+        function blue(){
+            document.body.style.backgroundColor = "blue";
+            var element = document.getElementById("radical");
+            var numberOfChildren = element.children.length;
+            document.getElementById("radical").innerHTML=("You have", numberOfChildren, "elements in this div");
+        }
+        
+        function yellow(){
+            document.body.style.backgroundColor = "yellow";
+            var element = document.getElementById("epic");
+            var numberOfChildren = element.children.length;
+            document.getElementById("epic").innerHTML = ("You have", numberOfChildren, "elements in this div");
+        }
+
+    </script>
+</html>
