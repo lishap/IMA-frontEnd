@@ -9,28 +9,23 @@ var app = {
         var apiKey = "88JhxYnLplcYpMEpA7pPJoYKhuZjJrKt";
         var sentURL = url + apiKey;
 
-        $.ajax({
-            url: sentURL,
-            type: 'GET',
-            dataType: 'JSON',
+        $("button").click(function(){
+            $.ajax({
+                url: sentURL,
+                type: 'GET',
+                dataType: 'JSON',
 
-            error: function(err) {
-                console.log('error:' + err)
-            },
-            
-            success: function(data) {
-                //console.log(data);
-                app.displayName(data);
-            },
-
+                error: function(err) {
+                    console.log('error:' + err)
+                },
+                
+                success: function(data) {
+                    var obj = data.results[0];
+                    var name = obj.bio;
+                    var output = document.getElementsByClassName('container')[0];  
+                    output.innerHTML = "<p>" + name + "</p>";
+                },
+            }); 
         });
-    },
-
-    displayName : function(data){
-        var name = data.results[0];
-        var output = document.getElementsByClassName('container');
-        output.innerHTML = "<p>" + name + "</p>";
     }
-};
-
-
+}
