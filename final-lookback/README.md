@@ -16,6 +16,8 @@
   4. Requesting a refreshed access token; Spotify returns a new access token to your app
   
  2. Use [Personalization API](https://developer.spotify.com/documentation/web-api/reference-beta/#category-personalization)
+ 
+ 107.170.81.187:8080/public/top
 
 **Part B: HTML/CSS**
 
