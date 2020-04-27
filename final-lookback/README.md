@@ -19,4 +19,4 @@
 
 **Part B: HTML/CSS**
 
-# I didn't realize how limiting APIs can be. I might dial down my concept, to a more doable level. 
+# I didn't realize how limiting APIs can be. I might dial down my concept to a more completable level.
