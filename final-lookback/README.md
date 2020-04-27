@@ -18,3 +18,5 @@
  2. Use [Personalization API](https://developer.spotify.com/documentation/web-api/reference-beta/#category-personalization)
 
 **Part B: HTML/CSS**
+
+# I didn't realize how limiting APIs can be. I might dial down my concept, to a more doable level. 
