@@ -1,12 +1,12 @@
-##### Part A: Spotify API & Google Photos API
+**Part A: Spotify API & Google Photos API**
 
-**Google Photos API**
+##### Google Photos API
 1. Get Authorization 
 
 2. Use Reading Media > Access media items API
   1. Get media metadata
 
-**Spotify API**
+##### Spotify API
 1. Get [Authorization](https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes) from Spotify 
   1. Have your application request authorization; the user logs in and authorizes access
     - Use authorization code flow
@@ -17,4 +17,4 @@
   
  2. Use [Personalization API](https://developer.spotify.com/documentation/web-api/reference-beta/#category-personalization)
 
-##### Part B: HTML/CSS
+**Part B: HTML/CSS**
