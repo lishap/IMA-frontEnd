@@ -4,22 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lookback</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <div class="bread">
-            </div>
-            <div class="container"></div>
-        </div>  <!-- close bread-->
- 
-        <script src="script.js"></script>
-    
-        <script>
-            (function(){
-                app.initialize();
-            }) ();
-        </script>
-    
-    </body>
+	</head>
+	<body>
+
+		<div class="title"></div>
+		<div class="the-track"></div>
+
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="script.js"></script>
+		<script>
+			$(document).ready(function(){
+				app.initialize();
+			});		
+		</script>
+	</body>
 </html>
