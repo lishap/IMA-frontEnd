@@ -9,19 +9,19 @@
 ##### Spotify API
 1. Get [Authorization](https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes) from Spotify 
     1. Have your application request authorization; the user logs in and authorizes access
-        -Use authorization code flow
-        -Set scope to: user-top-read
+            -Use authorization code flow
+            -Set scope to: user-top-read
     2. Have your application request refresh and access tokens; Spotify returns access and refresh tokens
     3. Use the access token to access the Spotify Web API; Spotify returns requested data
     4. Requesting a refreshed access token; Spotify returns a new access token to your app
   
 2. Use [Recently Played Tracks API](https://developer.spotify.com/documentation/web-api/reference/player/get-recently-played/)
     1. Query Parameters
-        -limit:1, after: (get meta data from Google Photos API), before (get meta data from Google Photos API)
+            -limit:1, after: (get meta data from Google Photos API), before (get meta data from Google Photos API)
     2. Response Format
-        -track = track object
-        -played_at = timestamp in unix milliseconds
-        -track.name = name of track
+            -track = track object
+            -played_at = timestamp in unix milliseconds
+            -track.name = name of track
 
 **Part B: HTML/CSS**
 
