@@ -96,6 +96,10 @@ var app = {
 				var track = data.track;
 				var trackName = track.name;
 				var timeStamp = data.played_at;
+
+				var dateText = document.createElement('p');
+				$('.track-name').html(trackName);
+				$('.date-played-at').html(timeStamp)
 			},
 		})
 	},

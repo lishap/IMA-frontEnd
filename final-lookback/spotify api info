@@ -6,8 +6,9 @@ Redirect URI: https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2
 O Auth: 
 https://accounts.spotify.com/authorize?client_id=773495bcb32e481793e8419ec2eafc25&scopes=user-read-recently-played&response_type=code&redirect_uri=https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback
 
-773495bcb32e481793e8419ec2eafc25:d999f7840a2d4a1caf9f23df16486fbd
 
-curl -H "Authorization: Basic NzczNDk1YmNiMzJlNDgxNzkzZTg0MTllYzJlYWZjMjU6ZDk5OWY3ODQwYTJkNGExY2FmOWYyM2RmMTY0ODZmYmQ=" -d grant_type=authorization_code -d code=AQBXTkLEfvBcZqDRk8rl0Zm_mM4QeYk3vyB-QqxKO52LVSzv8iyOPey9MK381dtsZOhunhJ6C7tbMrc7Tcz55_2CXMfh3xbxUGR4xi-nIb4z8LSiy3Vbqg_rQdT6EJGMmmG3jNh0SX_4Rz5adSeNyJSYPG86btu0wJfbkiE93Y00PnhmEBxWq7leWIRL1_wQa3XkVJRpR58xsdLDKRLEx3MLMek_PgD_na3-2bK1keSv-2aW6Y06 -d redirect_uri=https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback https://accounts.spotify.com/api/token
+curl -H "Authorization: Basic NzczNDk1YmNiMzJlNDgxNzkzZTg0MTllYzJlYWZjMjU6ZDk5OWY3ODQwYTJkNGExY2FmOWYyM2RmMTY0ODZmYmQ=" -d grant_type=authorization_code -d code=[] -d redirect_uri=https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback https://accounts.spotify.com/api/token
 
-"access_token":"BQD0yLnFrTyJV--k1cTYeHs35wF-bi9nAQLQV-etQiGZD9mSn-_xTe2pDrJsn_AdqGO198lf5AUPdOb-jQtbCdDY31pZ3-K3WhEJSlvOjpyJ0ASqz2WT9TqCJHKqDu-pgSm1cCNi3wJ1Gt5T","token_type":"Bearer","expires_in":3600,"refresh_token":"AQBMayCs3MUK-I6RhfMKPtUyxz4gmQhq9UOzSZocy6EZ64IDFV0wbTUs1g-OBwkjWK8uFtfh5KPN2Lmc7xTWKHAkyCiEsT5EEj6HFBeWcUwZj32kQlgSfFUhhKtVb6wtaOA","scope":""
+
+
+https://developer.spotify.com/console/get-recently-played/
