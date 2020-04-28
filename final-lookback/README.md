@@ -16,6 +16,12 @@
     4. Requesting a refreshed access token; Spotify returns a new access token to your app
   
 2. Use [Recently Played Tracks API](https://developer.spotify.com/documentation/web-api/reference/player/get-recently-played/)
+    1. Query Parameters
+        -limit:1, after: (get meta data from Google Photos API), before (get meta data from Google Photos API)
+    2. Response Format
+        -track = track object
+        -played_at = timestamp in unix milliseconds
+        -track.name = name of track
 
 **Part B: HTML/CSS**
 
