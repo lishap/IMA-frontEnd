@@ -1,11 +1,12 @@
 **Part A: Spotify API & Google Photos API**
 
 ##### Google Photos API
-1. Get Authorization 
+1. Get [Authorization](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
 
-2. Use Reading Media > Access media items API
-    1. Get media metadata
-
+2. Use [Reading Media > Access media items API](https://developers.google.com/photos/library/guides/access-media-items)
+    1. Response Format
+            - mediaMetadata.creationTime : "media-item-creation-time",
+      
 ##### Spotify API
 1. Get [Authorization](https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes) from Spotify 
     1. Have your application request authorization; the user logs in and authorizes access
