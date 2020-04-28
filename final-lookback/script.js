@@ -20,7 +20,7 @@ var app = {
 			},
 			
 			success: function(result) {
-		    	app.requestRefreshActionTokens(result)
+		    	app.requestRefreshActionTokens(result.code)
 		    },
 		})
 	},
@@ -42,7 +42,7 @@ var app = {
 			},
 
 			success: function(result) {
-		    	app.accessSpotifyWebAPI(result)
+		    	app.accessSpotifyWebAPI(result.access_token)
 		    },
 		})
 	},
@@ -56,7 +56,7 @@ var app = {
 			},
 
 			success: function(result) {
-		    	app.requestRefreshAccessToken(result)
+		    	app.requestRefreshAccessToken(result.refresh_token)
 		    },
 		})
 	},
@@ -72,16 +72,32 @@ var app = {
 				'grant_type':'refresh_token',
 				'refresh_token': result
 			},
+
+			success: function(result){
+				app.getRecentlyPlayedTracks(result.access_token)
+			},
 		})
-	}
+	},
 
-	
-
-
-
-
-
-
-
+	getRecentlyPlayedTracks: function(word){
+		$.ajax({
+			method: "GET",
+			url: "https://api.spotify.com/v1/me/player/recently-played",
+			header: {
+				'Authorization': 'Bearer' + result
+			},
+			data: {
+				'limit':'1',
+				//PASS GOOGLE PHOTO META DATA HERE
+				// 'after':,
+				// 'before':,
+			},
+			success: function(data){
+				var track = data.track;
+				var trackName = track.name;
+				var timeStamp = data.played_at;
+			},
+		})
+	},
 }
 
