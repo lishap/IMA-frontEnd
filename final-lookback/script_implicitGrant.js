@@ -36,12 +36,12 @@ var app = {
 		app.getRecentlyPlayedTracks(_token);
 	},
 
-	getRecentlyPlayedTracks: function(word){
+	getRecentlyPlayedTracks: function(token){
 		$.ajax({
 			method: "GET",
 			url: "https://api.spotify.com/v1/me/player/recently-played",
 			headers: {
-				'Authorization': 'Bearer ' + word
+				'Authorization': 'Bearer ' + token
 			},
 			data: {
 				'limit':'1',
@@ -57,6 +57,7 @@ var app = {
 
 				document.createElement('p');
 				$('.track-name').html(trackName);
+				console.log(artistsName);
 				$('artists-name').html(artistsName);
 				$('.date-played-at').html(timeStamp);
 
