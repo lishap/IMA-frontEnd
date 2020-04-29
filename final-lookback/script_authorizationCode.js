@@ -7,7 +7,7 @@ var app = {
 		var id = '773495bcb32e481793e8419ec2eafc25';
 		var scope = 'user-read-recently-played';
 		var response_type = 'code';
-		var redirect_uri = 'https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback';
+		var redirect_uri = '';
 
 		$.ajax({
 			method: "GET",
@@ -104,4 +104,3 @@ var app = {
 		})
 	},
 }
-
