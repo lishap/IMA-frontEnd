@@ -47,7 +47,7 @@ var app = {
 				'limit':'1',
 				//PASS GOOGLE PHOTO META DATA HERE
 				// 'after':,
-				// 'before':,
+				//'before':'1493596800'
 			},
 			success: function(data){
 				//debugger;
