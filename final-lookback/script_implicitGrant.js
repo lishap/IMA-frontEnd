@@ -33,22 +33,7 @@ var app = {
 			window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 		}
 
-		app.accessSpotifyWebAPI(_token);
-	},
-
-	accessSpotifyWebAPI: function(word){
-		$.ajax({
-			method: "POST",
-			url: "https://api.spotify.com/v1/me",
-			headers: {
-				'Authorization':'Bearer' + word
-			},
-
-			success: function(result) {
-				debugger;
-		    	app.getRecentlyPlayedTracks(result._token)
-		    },
-		})
+		app.getRecentlyPlayedTracks(_token);
 	},
 
 	getRecentlyPlayedTracks: function(word){
@@ -56,7 +41,7 @@ var app = {
 			method: "GET",
 			url: "https://api.spotify.com/v1/me/player/recently-played",
 			headers: {
-				'Authorization': 'Bearer' + word
+				'Authorization': 'Bearer ' + word
 			},
 			data: {
 				'limit':'1',
@@ -65,13 +50,16 @@ var app = {
 				// 'before':,
 			},
 			success: function(data){
-				var track = data.track;
-				var trackName = track.name;
-				var timeStamp = data.played_at;
+				//debugger;
+				var trackName = data.items[0].track["name"];
+				var artistsName = data.items[0].track["artists"][0].name;
+				var timeStamp = data.items[0]["played_at"];
 
-				var dateText = document.createElement('p');
+				document.createElement('p');
 				$('.track-name').html(trackName);
-				$('.date-played-at').html(timeStamp)
+				$('artists-name').html(artistsName);
+				$('.date-played-at').html(timeStamp);
+
 			},
 		})
 	},
