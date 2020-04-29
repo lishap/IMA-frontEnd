@@ -33,15 +33,30 @@ var app = {
 			window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 		}
 
-		app.getRecentlyPlayedTracks(_token);
+		app.accessSpotifyWebAPI(_token);
 	},
 
-	getRecentlyPlayedTracks: function(token){
+	accessSpotifyWebAPI: function(word){
+		$.ajax({
+			method: "POST",
+			url: "https://api.spotify.com/v1/me",
+			headers: {
+				'Authorization':'Bearer' + word
+			},
+
+			success: function(result) {
+				debugger;
+		    	app.getRecentlyPlayedTracks(result._token)
+		    },
+		})
+	},
+
+	getRecentlyPlayedTracks: function(word){
 		$.ajax({
 			method: "GET",
 			url: "https://api.spotify.com/v1/me/player/recently-played",
-			header: {
-				'Authorization': 'Bearer' + token
+			headers: {
+				'Authorization': 'Bearer' + word
 			},
 			data: {
 				'limit':'1',
