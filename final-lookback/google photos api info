@@ -1,3 +1,8 @@
-Client ID: 378228056629-btgcuqrdb3d1sg5hriacvn4uu23h64m0.apps.googleusercontent.com
-Client Secret: gVozICcoxIzOxoVya6yI_qlg
+Client ID: 378228056629-irllbfj8k2gueje2m6s87mgruesknoki.apps.googleusercontent.com
+Client Secret: 1ha9aONB9KZENIwsPc_xkbcl
+API Key: AIzaSyDHdS7LcxCF9rHXoPbGdcRgE0Mbvc32JMA
 
+
+scopes: .readonly
+
+https://developers.google.com/photos/library/reference/rest/v1/mediaItems/search?apix_params=%7B%22resource%22%3A%7B%7D%7D
