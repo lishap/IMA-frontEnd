@@ -2,6 +2,7 @@
 
 ##### Google Photos API
 1. Get [Authorization](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
+- [Auth Sample](https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html)
 
 2. Use [Reading Media > Access media items API](https://developers.google.com/photos/library/guides/access-media-items)
     1. Response Format
