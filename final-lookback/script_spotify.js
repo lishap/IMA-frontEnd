@@ -23,7 +23,7 @@ var app = {
 
 		// Replace with your app's client ID, redirect URI and desired scopes
 		const clientId = '773495bcb32e481793e8419ec2eafc25';
-		const redirectUri = 'http://127.0.0.1:8887';
+		const redirectUri = 'http://localhost';
 		const scopes = [
 			'user-read-recently-played'
 		];
@@ -45,9 +45,8 @@ var app = {
 			},
 			data: {
 				'limit':'1',
-				//PASS GOOGLE PHOTO META DATA HERE
-				// 'after':,
-				//'before':'1493596800'
+				//'after':,
+				'before':'1493596800'
 			},
 			success: function(data){
 				//debugger;
@@ -57,8 +56,7 @@ var app = {
 
 				document.createElement('p');
 				$('.track-name').html(trackName);
-				console.log(artistsName);
-				$('artists-name').html(artistsName);
+				$('.artists-name').html(artistsName);
 				$('.date-played-at').html(timeStamp);
 
 			},
