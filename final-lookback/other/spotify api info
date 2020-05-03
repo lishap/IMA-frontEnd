@@ -4,7 +4,7 @@ Scope: user-read-recently-played
 Redirect URI: https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback
 
 O Auth: 
-https://accounts.spotify.com/authorize?client_id=773495bcb32e481793e8419ec2eafc25&scopes=user-read-recently-played&response_type=code&redirect_uri=https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback
+https://accounts.spotify.com/authorize?client_id=773495bcb32e481793e8419ec2eafc25&scopes=user-read-recently-played&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8887
 
 curl -H "Authorization: Basic NzczNDk1YmNiMzJlNDgxNzkzZTg0MTllYzJlYWZjMjU6ZDk5OWY3ODQwYTJkNGExY2FmOWYyM2RmMTY0ODZmYmQ=" -d grant_type=authorization_code -d [] -d redirect_uri=https%3A%2F%2Fgithub.com%2Flishap%2FIMA-frontEnd%2Ftree%2Fmaster%2Ffinal-lookback https://accounts.spotify.com/api/token
 

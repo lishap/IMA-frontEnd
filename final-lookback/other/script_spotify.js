@@ -23,7 +23,7 @@ var app = {
 
 		// Replace with your app's client ID, redirect URI and desired scopes
 		const clientId = '773495bcb32e481793e8419ec2eafc25';
-		const redirectUri = 'http://localhost';
+		const redirectUri = 'http://127.0.0.1:8887';
 		const scopes = [
 			'user-read-recently-played'
 		];
@@ -41,12 +41,12 @@ var app = {
 			method: "GET",
 			url: "https://api.spotify.com/v1/me/player/recently-played",
 			headers: {
-				'Authorization': 'Bearer ' + token
+				'Authorization': 'Bearer ' + token,
 			},
 			data: {
 				'limit':'1',
-				//'after':,
-				'before':'1493596800'
+				//retuns 50 most recent, unix timestamp in milliseconds
+				'after':'1425531600000'
 			},
 			success: function(data){
 				//debugger;
