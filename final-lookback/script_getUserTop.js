@@ -57,7 +57,7 @@ var app = {
 				window.albumCoverURL = data.items["0"].album["images"][1].url;
 				var trackLink = data.items["0"].external_urls["spotify"];
 				
-				//let userName = prompt("What's your name?");
+				let userName = prompt("What's your name?");
 
 				$('.track-artist-name').html(userName + "'s favorite song is " + trackName + " by " + artistsName + "!");
 				//$('.album-cover').html("<img src=" + albumCoverURL + ">");
@@ -84,6 +84,9 @@ function setup() {
     }, function() {
         console.log('capture ready.')
     });
+	
+	var w = container.bounds.width;
+	var h = container.bounds.height;
 
     capture.elt.setAttribute('playsinline', '');
     createCanvas(w, h);
