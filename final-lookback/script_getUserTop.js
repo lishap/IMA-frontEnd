@@ -60,7 +60,7 @@ var app = {
 				let userName = prompt("What's your name?");
 
 				$('.track-artist-name').html(userName + "'s favorite song is " + trackName + " by " + artistsName + "!");
-				//$('.album-cover').html("<img src=" + albumCoverURL + ">");
+				$('.album-cover').html("<img src=" + albumCoverURL + ">");
 				$('.track-link').html("<a href=" + trackLink + "> Click here to play the song in Spotify </a>");
 			},
 		})
@@ -85,8 +85,8 @@ function setup() {
         console.log('capture ready.')
     });
 	
-	var w = container.bounds.width;
-	var h = container.bounds.height;
+	var w = bounds.width;
+	var h = bounds.height;
 
     capture.elt.setAttribute('playsinline', '');
     createCanvas(w, h);
