@@ -25,7 +25,7 @@ var app = {
 		const clientId = '773495bcb32e481793e8419ec2eafc25';
 		const redirectUri = 'http://127.0.0.1:8887';
 		const scopes = [
-			'user-read-recently-played'
+			'user-top-read'
 		];
 
 		// If there is no token, redirect to Spotify authorization
@@ -33,32 +33,32 @@ var app = {
 			window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 		}
 
-		app.getRecentlyPlayedTracks(_token);
+		app.getUserTopTracks(_token);
 	},
 
-	getRecentlyPlayedTracks: function(token){
+	getUserTopTracks: function(token){
 		$.ajax({
 			method: "GET",
-			url: "https://api.spotify.com/v1/me/player/recently-played",
+			url: "https://api.spotify.com/v1/me/top/tracks",
 			headers: {
 				'Authorization': 'Bearer ' + token,
 			},
 			data: {
-				'limit':'1',
-				//retuns 50 most recent, unix timestamp in milliseconds
-				'after':'1425531600000'
+				'limit': '1',
+                //'offset':'0',
+                'time_range':'short_term',
 			},
 			success: function(data){
-				//debugger;
-				var trackName = data.items[0].track["name"];
-				var artistsName = data.items[0].track["artists"][0].name;
-				var timeStamp = data.items[0]["played_at"];
+				var trackName = data.items[0].name;
+				var artistsName = data.items[0].artists["0"].name;
+				var albumCoverURL = data.items["0"].album["images"][1].url;
+				var trackLink = data.items["0"].external_urls["spotify"];
+		
 
-				document.createElement('p');
 				$('.track-name').html(trackName);
 				$('.artists-name').html(artistsName);
-				$('.date-played-at').html(timeStamp);
-
+				$('.album-cover').html("<img src=" + albumCoverURL + ">");
+				$('.track-link').html("<a href=" + trackLink + "> Click here to play the song in Spotify </a>");
 			},
 		})
 	},
