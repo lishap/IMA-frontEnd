@@ -72,7 +72,8 @@ var tracker
 var w = 640,
 	h = 480;
 let img;
-let isImgLoaded = false
+let isImgLoaded = false;
+let button;
 
 function setup() {
     capture = createCapture({
@@ -94,21 +95,34 @@ function setup() {
     tracker = new clm.tracker();
     tracker.init();
 	tracker.start(capture.elt);
+
+	button = createButton('Save Image');
+	button.position(0,600);
+	button.mousePressed(saveImage);
 }
+
+	function saveImage(){
+		saveCanvas();
+	}
 
 function draw() {
 	if (isImgLoaded === false && window.albumCoverURL !== undefined) {
 		img = createImg(window.albumCoverURL);
+		img.crossOrigin="anonymous";
 		isImgLoaded = true
 	}
     image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     if (positions.length > 0) {
+		//text("I've been listening to ", ((positions[62][0])-80), ((positions[62][1])-300));
 		noStroke();
 		fill(0, 255, 255);
 		image(img,((positions[62][0])-80), ((positions[62][1])-300), 175, 175);
-    }
+		
+	}
+
+
 }
 
 
