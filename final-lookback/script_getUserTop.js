@@ -52,78 +52,32 @@ var app = {
 			
 			success: function(data){
 				
+	
 				var trackName = data.items[0].name;
 				var artistsName = data.items[0].artists["0"].name;
 				window.albumCoverURL = data.items["0"].album["images"][1].url;
 				var trackLink = data.items["0"].external_urls["spotify"];
-				
-				let userName = prompt("What's your name?");
+				var previewURL = data.items[0].preview_url;
 
-				$('.track-artist-name').html(userName + "'s favorite song is " + trackName + " by " + artistsName + "!");
-				//$('.album-cover').html("<img src=" + albumCoverURL + ">");
-				$('.track-link').html("<a href=" + trackLink + "> Click here to play the song in Spotify </a>");
+				const monthNames = ["January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December"];
+
+				var date = new Date ();
+				window.month = monthNames[date.getMonth()];
+				window.year = date.getFullYear();
+
+				$('.track-artist-name').html("My favorite song as of " + month + ", " + year + " is <a href=" + trackLink + ">" + trackName + " by " + artistsName + "</a> !");
+				
+				var audioElement = document.createElement('audio');
+				audioElement.src = previewURL;
+				audioElement.autoplay = 'true';
+				audioElement.controls = 'true';
+
 			},
 		})
 	},
 }
 
-var capture;
-var tracker
-var w = 640,
-	h = 480;
-let img;
-let isImgLoaded = false;
-let button;
-
-function setup() {
-    capture = createCapture({
-        audio: false,
-        video: {
-            width: w,
-            height: h
-        }
-    }, function() {
-        console.log('capture ready.')
-    });
-    capture.elt.setAttribute('playsinline', '');
-    createCanvas(w, h);
-    capture.size(w, h);
-    capture.hide(w,h);
-
-    colorMode(HSB);
-
-    tracker = new clm.tracker();
-    tracker.init();
-	tracker.start(capture.elt);
-
-	button = createButton('Save Image');
-	button.position(0,600);
-	button.mousePressed(saveImage);
-}
-
-	function saveImage(){
-		saveCanvas();
-	}
-
-function draw() {
-	if (isImgLoaded === false && window.albumCoverURL !== undefined) {
-		img = createImg(window.albumCoverURL);
-		img.crossOrigin="anonymous";
-		isImgLoaded = true
-	}
-    image(capture, 0, 0, w, h);
-    var positions = tracker.getCurrentPosition();
-
-    if (positions.length > 0) {
-		//text("I've been listening to ", ((positions[62][0])-80), ((positions[62][1])-300));
-		noStroke();
-		fill(0, 255, 255);
-		image(img,((positions[62][0])-80), ((positions[62][1])-300), 175, 175);
-		
-	}
-
-
-}
 
 
 
