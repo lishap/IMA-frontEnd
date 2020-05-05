@@ -6,5 +6,9 @@ html, body {
 canvas {
     display: block;
 }
+
+img {
+    display:none;
+}
   
 

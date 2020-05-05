@@ -60,7 +60,7 @@ var app = {
 				let userName = prompt("What's your name?");
 
 				$('.track-artist-name').html(userName + "'s favorite song is " + trackName + " by " + artistsName + "!");
-				$('.album-cover').html("<img src=" + albumCoverURL + ">");
+				//$('.album-cover').html("<img src=" + albumCoverURL + ">");
 				$('.track-link').html("<a href=" + trackLink + "> Click here to play the song in Spotify </a>");
 			},
 		})
@@ -70,11 +70,11 @@ var app = {
 var capture;
 var tracker
 var w = 640,
-    h = 480;
+	h = 480;
+let img;
+let isImgLoaded = false
 
 function setup() {
-    img = createImage("'"+ window.albumCoverURL + "'")
-  
     capture = createCapture({
         audio: false,
         video: {
@@ -84,31 +84,32 @@ function setup() {
     }, function() {
         console.log('capture ready.')
     });
-	
-	var w = bounds.width;
-	var h = bounds.height;
-
     capture.elt.setAttribute('playsinline', '');
     createCanvas(w, h);
     capture.size(w, h);
-    capture.hide();
+    capture.hide(w,h);
 
     colorMode(HSB);
 
     tracker = new clm.tracker();
     tracker.init();
-    tracker.start(capture.elt);
+	tracker.start(capture.elt);
 }
 
 function draw() {
+	if (isImgLoaded === false && window.albumCoverURL !== undefined) {
+		img = createImg(window.albumCoverURL);
+		isImgLoaded = true
+	}
     image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     if (positions.length > 0) {
-        
-        noStroke();
-        fill(0, 255, 255);
-        image(img,((positions[62][0])-80), ((positions[62][1])-300), 175, 175);
+		noStroke();
+		fill(0, 255, 255);
+		image(img,((positions[62][0])-80), ((positions[62][1])-300), 175, 175);
     }
 }
+
+
 
